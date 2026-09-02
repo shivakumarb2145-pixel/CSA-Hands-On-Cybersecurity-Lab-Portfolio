@@ -6,23 +6,22 @@ This repository documents my practical work across security monitoring, network 
 
 ## Training Areas
 
-- Linux and Kali Linux Administration
-- Networking Fundamentals
-- Wireshark Packet Analysis
-- Network Reconnaissance and Port Scanning
-- Controlled Security Testing Labs
-- Linux Firewall and Security Logging
-- Snort IDS/IPS
-- Windows Event Logs and Sysmon
-- SIEM Operations with IBM QRadar
-- SIEM Operations with Splunk
-- Threat Intelligence
-- Threat Hunting
-- Malware Analysis
-- YARA Detection Rules
-- Wazuh Endpoint Monitoring and File Integrity Monitoring
-- Incident Response
-- Jira and SOAR Concepts
+01-Linux-Kali/
+02-Networking-Fundamentals/
+03-Wireshark/
+04-Nmap-Reconnaissance/
+05-Metasploit-Lab/
+06-Apache-DoS-Malware-Lab/
+07-SSH-RDP-Phishing-Web-Security/
+08-Linux-Firewall-Logging/
+09-Snort-IDS-IPS/
+10-Windows-Event-Logs-Sysmon/
+11-QRadar-SIEM/
+12-Splunk-SIEM/
+13-Threat-Intelligence-Threat-Hunting-Lab/
+14-Malware-Analysis-YARA/
+15-Wazuh-EDR-FIM/
+16-Incident-Response-Jira-SOAR/
 
 ## Security Tools Used
 
