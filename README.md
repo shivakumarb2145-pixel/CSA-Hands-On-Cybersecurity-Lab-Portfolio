@@ -1,10 +1,279 @@
 # CSA Hands-On Cybersecurity Lab Portfolio
 
-Hands-on cybersecurity labs and practical exercises completed during EC-Council Certified SOC Analyst (CSA) training.
+## SOC Analyst | Cybersecurity Operations | SIEM | Threat Detection
 
-This repository documents my practical work across security monitoring, network analysis, SIEM operations, threat detection, endpoint security, threat hunting, malware analysis, and incident response.
+Hands-on cybersecurity lab portfolio developed during EC-Council Certified SOC Analyst (CSA) training.
 
-## Training Areas
+This repository documents practical exercises in security monitoring, SIEM operations, log analysis, network traffic analysis, threat detection, endpoint monitoring, threat hunting, malware analysis, and incident response.
+
+All security testing and offensive activities documented here were performed in controlled training/lab environments.
+
+---
+
+## 🛡️ Core SOC Skills
+
+- SIEM monitoring and investigation
+- Security log analysis
+- Authentication and access monitoring
+- Network traffic analysis
+- Threat detection and alert investigation
+- Detection rule creation and validation
+- False-positive tuning
+- Endpoint monitoring and File Integrity Monitoring
+- Threat hunting
+- Threat intelligence and IOC analysis
+- Malware analysis
+- Incident response
+- Security dashboards and reporting
+- Security workflow automation concepts
+
+---
+
+## 🔧 Security Tools
+
+### SIEM & Security Monitoring
+- IBM QRadar
+- Splunk
+- Wazuh
+
+### Network Security & Analysis
+- Wireshark
+- Snort IDS/IPS
+- Nmap
+- iptables
+- Netcat
+
+### Endpoint & Operating Systems
+- Windows Event Viewer
+- Sysmon
+- Kali Linux
+- Linux
+
+### Threat Intelligence & Malware Analysis
+- VirusTotal
+- AbuseIPDB
+- YARA
+
+### Security Testing Tools Used in Controlled Labs
+- Metasploit
+- Hydra
+- Medusa
+- SQLMap
+- DIRB
+- hping3
+
+### Security Operations
+- Jira
+- SOAR concepts
+
+---
+
+# ⭐ Key Practical Investigations
+
+## 1. QRadar Multi-Stage Incident Investigation
+
+Investigated a simulated multi-stage security incident by correlating authentication and network activity.
+
+### Investigation sequence
+
+```text
+Multiple Failed Logins
+        ↓
+Invalid User Activity
+        ↓
+Successful SSH Login
+        ↓
+Privilege Escalation
+        ↓
+Root-Level Activity
+        ↓
+Python HTTP Server
+        ↓
+Port 8000 Network Activity
+        ↓
+confidential.txt Activity
+        ↓
+Different Source IP
+        ↓
+Incident Documentation & Escalation
+Work performed
+Investigated authentication failures and successful SSH authentication.
+Correlated source and destination IP addresses.
+Identified privilege escalation activity.
+Investigated root-level activity.
+Analyzed subsequent network activity on port 8000.
+Correlated activity involving confidential.txt.
+Observed activity involving a different source IP.
+Built an incident timeline.
+Documented findings.
+Identified the need for further L2/L3 investigation.
+
+Primary tools: IBM QRadar, AQL, Linux authentication logs, Network Activity.
+
+2. Splunk Security Monitoring & Detection
+
+Performed hands-on SIEM exercises using Splunk with Linux, Apache, SSH, Windows, and firewall logs.
+
+Work performed
+Ingested Apache access logs.
+Monitored logs through TCP/UDP input.
+Configured Splunk Forwarder log collection.
+Forwarded Kali and Windows security logs.
+Analyzed authentication failures.
+Investigated Apache access activity.
+Used SPL for filtering, deduplication, statistics, and visualization.
+Investigated directory brute-force activity.
+Created an alert for suspicious 404/GET activity.
+Created an alert for potential XSS activity.
+Built security monitoring dashboards.
+Created event types and knowledge objects.
+Used IP enrichment with iplocation.
+Created VirusTotal and AbuseIPDB workflow actions for IP reputation checks.
+
+Primary tools: Splunk, SPL, Apache logs, SSH/authentication logs, Windows logs.
+
+3. Wazuh Endpoint Monitoring & FIM
+
+Performed endpoint monitoring exercises using Wazuh agents on Linux and Windows systems.
+
+Work performed
+Deployed Wazuh agents.
+Monitored endpoint activity.
+Configured and tested File Integrity Monitoring.
+Detected file creation.
+Detected file modification.
+Detected file deletion.
+Investigated authentication failures.
+Observed unauthorized process/listener activity.
+Connected endpoint monitoring with incident response concepts.
+
+Primary tools: Wazuh, Linux, Windows.
+
+4. Snort IDS/IPS Detection
+
+Configured and tested Snort as a network intrusion detection and prevention system.
+
+Work performed
+Used Snort in sniffer mode.
+Used packet logging mode.
+Configured Snort IDS.
+Created custom ICMP detection rules.
+Created custom SSH detection rules.
+Generated controlled traffic to validate alerts.
+Investigated Nmap-generated alerts.
+Tested Snort IPS functionality.
+Observed blocking behavior during controlled SSH testing.
+
+Primary tools: Snort, Wireshark, Nmap.
+
+5. Threat Hunting & Malware Analysis
+
+Practiced threat hunting and malware analysis concepts using controlled lab samples and security intelligence sources.
+
+Threat Hunting
+Studied hypothesis-based threat hunting.
+Worked with Indicators of Compromise (IOCs).
+Studied Indicators of Attack (IOAs).
+Studied Indicators of Exposure (IOEs).
+Reviewed threat intelligence as part of the hunting process.
+Studied MITRE ATT&CK concepts.
+Malware Analysis
+Studied static, dynamic, and hybrid malware analysis.
+Generated file hashes and investigated them using VirusTotal.
+Investigated suspicious malware samples in controlled environments.
+Created custom YARA rules.
+Used strings and conditions in YARA rules.
+Created rules for suspicious and malware-related samples.
+Used process and network information during dynamic analysis.
+Used netstat to observe established connections and associated process information.
+
+Primary tools: YARA, VirusTotal, Kali Linux, Windows, MITRE ATT&CK.
+
+📚 Training Areas
+Linux & Networking
+Linux/Kali administration
+Linux filesystem and permissions
+Linux processes and services
+TCP/IP fundamentals
+IPv4 and IPv6
+TCP and UDP
+Network ports
+NAT
+HTTP fundamentals
+Network Analysis
+Wireshark packet capture
+ICMP analysis
+TCP three-way handshake analysis
+HTTP request analysis
+Netcat traffic analysis
+Nmap traffic analysis
+PCAP investigation
+Display and capture filters
+Network Security
+Host discovery
+Port scanning
+Service/version detection
+Nmap NSE scripts
+Snort IDS/IPS
+Linux firewall configuration
+Windows firewall logging
+Windows Security
+Windows Event Viewer
+Security event analysis
+Authentication monitoring
+Account activity monitoring
+Sysmon telemetry
+Process and network monitoring
+SIEM
+IBM QRadar
+QRadar Log Activity
+QRadar Network Activity
+QRadar offenses
+QRadar AQL
+Detection rules
+False-positive tuning
+Dashboards
+Reports
+Splunk data ingestion
+Splunk SPL
+Splunk alerts
+Splunk dashboards
+Knowledge objects
+Endpoint Security
+Wazuh
+Endpoint monitoring
+File Integrity Monitoring
+Authentication monitoring
+Process/listener monitoring
+Threat Intelligence & Hunting
+Threat intelligence lifecycle
+Threat actors
+APT concepts
+IOC / IOA / IOE
+Threat hunting methodology
+MITRE ATT&CK
+Malware Analysis
+Static analysis
+Dynamic analysis
+Hybrid analysis
+File hashing
+VirusTotal
+YARA
+Process analysis
+Network connection analysis
+Incident Response
+Incident response lifecycle
+Preparation
+Detection & analysis
+Containment
+Eradication
+Recovery
+Post-incident activity
+Incident response playbooks
+Incident documentation
+Jira
+SOAR concepts and playbooks
+📁 Repository Structure
 
 01-Linux-Kali/
 02-Networking-Fundamentals/
@@ -23,109 +292,22 @@ This repository documents my practical work across security monitoring, network 
 15-Wazuh-EDR-FIM/
 16-Incident-Response-Jira-SOAR/
 
-## Security Tools Used
+🎯 Purpose
 
-- Kali Linux
-- IBM QRadar
-- Splunk
-- Wazuh
-- Wireshark
-- Snort
-- Sysmon
-- Nmap
-- Metasploit
-- YARA
-- VirusTotal
-- AbuseIPDB
-- Hydra
-- Medusa
-- SQLMap
-- DIRB
-- hping3
-- Netcat
-- iptables
-- Jira
+This portfolio documents the practical cybersecurity skills developed during EC-Council Certified SOC Analyst (CSA) training.
 
-## Key Practical Work
+The focus of the portfolio is defensive security operations, including:
 
-### SIEM and Log Analysis
+Security monitoring
+SIEM operations
+Log analysis
+Threat detection
+Incident investigation
+Network security monitoring
+Endpoint monitoring
+Threat hunting
+Threat intelligence
+Malware analysis
+Incident response
 
-- Configured and worked with IBM QRadar Community Edition.
-- Ingested Linux security logs into QRadar using rsyslog.
-- Investigated authentication failures and successful logins.
-- Practiced QRadar AQL searches and event/flow analysis.
-- Created detection rules and investigated generated offenses.
-- Performed false-positive tuning.
-- Built QRadar dashboards and reports.
-- Ingested Apache, SSH, Windows, and firewall logs into Splunk.
-- Practiced SPL-based log analysis, filtering, deduplication, statistics, and visualization.
-- Created Splunk alerts for directory brute-force activity and potential XSS activity.
-- Built dashboards for security monitoring.
-- Used IP reputation workflows with VirusTotal and AbuseIPDB.
-
-### Network Security and Detection
-
-- Captured and analyzed ICMP, TCP, HTTP, UDP, Netcat, and Nmap traffic using Wireshark.
-- Analyzed TCP three-way handshakes and HTTP requests.
-- Used Wireshark display and capture filters for network investigation.
-- Performed host discovery and port scanning in controlled lab environments using Nmap.
-- Configured Snort in sniffer, packet logging, IDS, and IPS modes.
-- Created custom ICMP and SSH detection rules.
-- Tested Snort alerts and IPS blocking using controlled traffic.
-
-### Endpoint Security
-
-- Installed and configured Wazuh agents on Linux and Windows systems.
-- Practiced File Integrity Monitoring (FIM).
-- Investigated file creation, modification, and deletion events.
-- Monitored authentication failures.
-- Observed unauthorized process/listener activity.
-- Worked with Windows Event Viewer and Sysmon telemetry.
-
-### Threat Hunting and Malware Analysis
-
-- Practiced hypothesis-based threat hunting.
-- Studied Indicators of Compromise (IOCs), Indicators of Attack (IOAs), and Indicators of Exposure (IOEs).
-- Performed static and dynamic malware analysis in controlled lab environments.
-- Generated and investigated file hashes using VirusTotal.
-- Created custom YARA rules for suspicious strings and malware-related samples.
-- Used network connections and process information during dynamic analysis.
-
-### Incident Response
-
-- Studied the incident response lifecycle and security playbooks.
-- Investigated a simulated multi-stage security incident in QRadar involving authentication failures, successful SSH access, privilege escalation, and subsequent network activity.
-- Correlated events across authentication and network activity.
-- Documented findings and practiced escalation to higher-level investigation.
-- Studied Jira-based security task management and SOAR workflows.
-
-## Lab Environment
-
-The practical exercises were performed in controlled lab environments using Linux and Windows virtual machines and intentionally generated security events.
-
-Offensive security activities documented in this repository are presented strictly as controlled lab exercises for security monitoring, detection, and investigation purposes.
-
-## Repository Structure
-
-```
-01-Linux-Kali/
-02-Networking-Fundamentals/
-03-Wireshark/
-04-Nmap-Reconnaissance/
-05-Metasploit-Lab/
-06-Web-Security-Lab/
-07-Linux-Firewall/
-08-Snort-IDS-IPS/
-09-Windows-Logs-Sysmon/
-10-QRadar-SIEM/
-11-Splunk-SIEM/
-12-Threat-Intelligence/
-13-Threat-Hunting/
-14-Malware-Analysis-YARA/
-15-Wazuh-Endpoint-Security/
-16-Incident-Response-Jira-SOAR/
-Purpose
-
-This portfolio documents the practical cybersecurity skills developed during my CSA training and demonstrates
-my hands-on exposure to SOC monitoring,security detection, log analysis, network analysis, endpoint monitoring,
-threat hunting, malware analysis, and incident response.
+Offensive security activities included in the repository were performed strictly as controlled cybersecurity training exercises and are documented from a defensive SOC perspective.
